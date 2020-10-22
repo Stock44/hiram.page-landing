@@ -74,8 +74,8 @@ body {
     #msg{
         font-size: 3vw;
         position: fixed;
-        top: calc(27vh + 37vw);
-        right: 18vw;
+        top: calc(27vh + 56vw);
+        left: 6vw;
     }
 
     #scroll1{
