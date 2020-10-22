@@ -14,84 +14,23 @@ body {
     height: 100vh;
 }
 
-.name {
-    font-size: 30vh;
-
-    color: #000000;
-
-    position: absolute;
-
-}
-
-#name1 {
-    top: -6vh;
-}
-
-#name2 {
-    top: 16vh
-}
-
-#name3 {
-    top: 38vh
-}
-
-#name4 {
-    top: 60vh
-}
-
-#name5 {
-    top: 82vh
-}
-
-#name6 {
-    top: 104vh
-}
-
-#tld {
-    font-size: 30vh;
-
-    color: #410074;
-
-    position: fixed;
-    top: 5vh;
-    left: 97.5vh;
-
-    animation: tldColor 30s linear 2s infinite backwards;
-
-    font-variant-alternates: character-variant(salt);
-}
-
-#scrolling-text {
-    position: fixed;
-    left: 5vw;
-    animation: scrollText 6s linear infinite;
-
-}
-
-@keyframes scrollText {
-    from {
-        top: 0
+@keyframes bgColor {
+    0% {
+        background-color: #FFE600;
     }
-    to {
-        top: -22vh;
+    25% {
+        background-color: #3e1dc2;
+    }
+    50% {
+        background-color: #4ecc13;
+    }
+    75% {
+        background-color: #c70700;
+    }
+    100% {
+        background-color: #FFE600;
     }
 }
-
-#triangleContainer {
-    height: 100vh;
-    width: 100vw;
-}
-
-#msg {
-    position: fixed;
-    font-size: 2.5vh;
-
-    color: black;
-
-    left: 110vh;
-    top: 42vh;
-}
-
 
 @keyframes tldColor {
     0% {
@@ -100,10 +39,10 @@ body {
     25% {
         color: #de8d1c;
     }
-    50%{
+    50% {
         color: #d1114b;
     }
-    75%{
+    75% {
         color: #00d126;
     }
     100% {
@@ -111,22 +50,170 @@ body {
     }
 }
 
-@keyframes bgColor {
-    0% {
-        background-color: #FFE600;
+@media only screen and (orientation: portrait) {
+    .name {
+        font-size: 25vw;
+
+        color: #000000;
+
+        position: absolute;
+
     }
-    25% {
-        background-color: #3e1dc2;
+
+    .scrolling-text {
+        position: fixed;
     }
-    50%{
-        background-color: #4ecc13;
+
+    #tld{
+        font-size: 20vw;
+        position: fixed;
+        top: calc(25vh + 37vw);
+        animation: tldColor 30s linear 2s infinite backwards;
     }
-    75%{
-        background-color: #c70700;
+
+    #msg{
+        font-size: 3vw;
+        position: fixed;
+        top: calc(27vh + 37vw);
+        right: 18vw;
     }
-    100% {
-        background-color: #FFE600;
+
+    #scroll1{
+        width: 100vw;
+        top: 25vh;
+        animation: leftScroll 5s linear both infinite;
     }
+    #scroll2{
+        width: 100vw;
+        top: calc(18.5vw + 25vh);
+        animation: rightScroll 5s linear both infinite;
+    }
+
+    @keyframes leftScroll {
+        from{
+            right: 0
+        }
+        to{
+            right: 73vw;
+        }
+    }
+
+    @keyframes rightScroll {
+        from{
+            left: 0
+        }
+        to{
+            left: 73vw;
+        }
+    }
+
+    #name1 {
+        left: 0;
+    }
+
+    #name2 {
+        left: 73vw;
+    }
+
+    #name3 {
+        left: 146vw;
+    }
+
+    #name4 {
+        right: 0;
+    }
+
+    #name5 {
+        right: 73vw;
+    }
+
+    #name6 {
+        right: 146vw;
+    }
+
 }
+
+@media only screen and (orientation: landscape) {
+    .name {
+        font-size: 30vh;
+
+        color: #000000;
+
+        position: absolute;
+
+    }
+    #name1 {
+        top: -6vh;
+    }
+
+    #name2 {
+        top: 16vh
+    }
+
+    #name3 {
+        top: 38vh
+    }
+
+    #name4 {
+        top: 60vh
+    }
+
+    #name5 {
+        top: 82vh
+    }
+
+    #name6 {
+        top: 104vh
+    }
+
+    #tld {
+        font-size: 30vh;
+
+        color: #410074;
+
+        position: fixed;
+        top: 5vh;
+        left: 97.5vh;
+
+        animation: tldColor 30s linear 2s infinite backwards;
+    }
+
+    .scrolling-text {
+        position: fixed;
+        left: 5vw;
+        animation: scrollText 6s linear infinite;
+
+    }
+
+    @keyframes scrollText {
+        from {
+            top: 0
+        }
+        to {
+            top: -22vh;
+        }
+    }
+
+    #triangleContainer {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #msg {
+        position: fixed;
+        font-size: 2.5vh;
+
+        color: black;
+
+        left: 110vh;
+        top: 42vh;
+    }
+
+
+
+}
+
+
+
 
 
